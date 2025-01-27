@@ -4,10 +4,11 @@ public class InsertionSort implements Sorter {
         System.out.println("Insertion Sort!!!");
         for (int i = 1; i < input.length; i++) {
             int temp = input[i];
-            for (int k = i - 1; k >= 0 && temp < input[i]; k--) {
+            int k;
+            for (k = i - 1; k >= 0 && input[k] > temp; k--) {
                 input[k+1] = input[k];
-            input[k] = temp;
             }
+            input[k+1] = temp;
         }
     }
 }
